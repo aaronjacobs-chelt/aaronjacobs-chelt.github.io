@@ -294,13 +294,57 @@
         
         <h2 id="contact">Contact Me</h2>
         <div class="contact-form">
-            <form action="#" method="post">
+            <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                <input type="hidden" name="access_key" value="c092d31f-9388-4109-8a35-709153db928b">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
+                <div id="result"></div>
             </form>
         </div>
+
+        <script>
+            const form = document.getElementById('form');
+            const result = document.getElementById('result');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+                
+                result.innerHTML = "Please wait...";
+                
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = json.message;
+                        form.reset();
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function() {
+                    setTimeout(() => {
+                        result.innerHTML = "";
+                    }, 5000);
+                });
+            });
+        </script>
     </div>
     <footer>
         <p>&copy; 2025 Aaron Jacobs. All rights reserved.</p>

@@ -92,6 +92,11 @@
                 background-color: #0077cc;
             }
         }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 10px;
@@ -169,12 +174,40 @@
         
         <h2 id="contact">Contact Me</h2>
         <div class="contact-form">
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <form id="contactForm">
+    <input type="hidden" name="access_key" value="c092d31f-9388-4109-8a35-709153db928b">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+<p id="responseMessage"></p>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var formData = new FormData(this);
+
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById("responseMessage").textContent = "Message sent successfully!";
+                document.getElementById("contactForm").reset();
+            } else {
+                document.getElementById("responseMessage").textContent = "Error: " + data.message;
+            }
+        })
+        .catch(error => {
+            document.getElementById("responseMessage").textContent = "Error sending message.";
+        });
+    });
+</script>
+
         </div>
     </div>
     <footer>
