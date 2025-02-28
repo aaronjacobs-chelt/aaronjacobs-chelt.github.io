@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Aaron's GitHub Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23999999' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #444;
+            margin-top: 40px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: #444;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+        }
+        .navbar a.active {
+            background-color: #0077cc;
+        }
+        /* Carousel Styles */
+        .carousel-container { 
+            width: 90%; 
+            margin: 20px auto; 
+            overflow: hidden; 
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+        .carousel { 
+            display: flex; 
+            transition: transform 0.5s ease-in-out; 
+        }
+        .carousel img { 
+            width: 100%; 
+            height: auto; 
+        }
+        .prev, .next {
+            position: absolute; 
+            top: 50%; 
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: white; 
+            border: none;
+            padding: 10px 16px; 
+            cursor: pointer; 
+            font-size: 20px;
+            z-index: 10;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            .carousel-container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Aaron's GitHub Page</header>
+    
+    <div class="navbar">
+        <a href="newpage.html">Home</a>
+        <a href="interests.html">Interests</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+    <div class="container">
+        <h2>Photo Gallery</h2>
+        <p>Welcome to my photo gallery! Below you'll find a collection of images from my adventures and projects. Use the arrows to navigate through the carousel.</p>
+        
+        <div class="carousel-container">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel">
+                <img src="photos/image1.webp" alt="Image 1">
+                <img src="photos/image2.webp" alt="Image 2">
+                <img src="photos/image3.webp" alt="Image 3">
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        
+        <h2>About the Gallery</h2>
+        <p>This gallery showcases photos from my kayaking adventures, mushroom cultivation projects, and other interests. I'll be updating this collection regularly with new images from my explorations and creative endeavors.</p>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Aaron Jacobs. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let index = 0;
+        function moveSlide(step) {
+            const slides = document.querySelectorAll('.carousel img');
+            index = (index + step + slides.length) % slides.length;
+            document.querySelector('.carousel').style.transform = `translateX(-${index * 100}%)`;
+        }
+    </script>
+</body>
+</html>
