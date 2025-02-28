@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Aaron's GitHub Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23999999' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #444;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #0077cc;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #005599;
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 20px;
+            width: 100%;
+        }
+        h2 {
+            color: #444;
+            margin-top: 40px;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-family: Arial, sans-serif;
+        }
+        .contact-form button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #005599;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            img {
+                width: 120px;
+            }
+        }
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: #444;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+        }
+        .navbar a.active {
+            background-color: #0077cc;
+        }
+        .project-item {
+            margin-bottom: 30px;
+            text-align: left;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .project-item h3 {
+            color: #0077cc;
+            margin-top: 0;
+        }
+        .project-status {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .status-complete {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status-in-progress {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .status-planned {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+        .tech-tag {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>My Projects</header>
+    
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="interests.html">Interests</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+    <div class="container">
+        <img src="happycapcircle.png" alt="Aaron's Profile Picture">
+        
+        <h2>My Portfolio</h2>
+        <p>Here's a collection of my recent projects that showcase my skills, interests, and development experience.</p>
+        
+        <div class="project-item">
+            <h3>🍄 MycoDB: Mushroom Cultivation Tracker</h3>
+            <p>A comprehensive web application for tracking mushroom cultivation progress, environmental conditions, and yields.</p>
+            <div>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Chart.js</span>
+                <span class="tech-tag">Progressive Web App</span>
+            </div>
+            <div class="project-status status-in-progress">In Progress</div>
+            <p>Features:</p>
+            <ul>
+                <li>Real-time environmental monitoring via IoT sensors</li>
+                <li>Growth stage tracking with image recognition</li>
+                <li>Yield prediction based on historical data</li>
+                <li>Customizable alerts for optimal conditions</li>
+                <li>Community sharing of cultivation "recipes"</li>
+            </ul>
+            <p>This project combines my passion for mycology with software development. The biggest challenge has been implementing the image recognition system for automatically identifying contamination issues.</p>
+        </div>
+        
+        <div class="project-item">
+            <h3>🎮 SpectrumQuest: ZX Spectrum Next Adventure Game</h3>
+            <p>A retro-style adventure game built for the ZX Spectrum Next, featuring modern game mechanics while respecting hardware limitations.</p>
+            <div>
+                <span class="tech-tag">Z80 Assembly</span>
+                <span class="tech-tag">NextBASIC</span>
+                <span class="tech-tag">Pixel Art</span>
+                <span class="tech-tag">Chiptune Music</span>
+            </div>
+            <div class="project-status status-complete">Completed</div>
+            <p>Features:</p>
+            <ul>
+                <li>16-color palette with dithering techniques for expanded visual range</li>
+                <li>Original soundtrack using AY-3-8912 chip capabilities</li>
+                <li>Procedurally generated dungeons for extended replayability</li>
+                <li>Memory-efficient save game system</li>
+                <li>Distributed as both digital download and physical cassette</li>
+            </ul>
+            <p>Creating games for retro hardware has been a fascinating exercise in working within strict constraints. Optimizing code to fit within 128K while maintaining smooth gameplay required several innovative techniques.</p>
+        </div>
+        
+        <div class="project-item">
+            <h3>📊 River Health Monitor</h3>
+            <p>Citizen science platform for collecting and visualizing water quality data from the Severn River and tributaries.</p>
+            <div>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Leaflet.js</span>
+                <span class="tech-tag">D3.js</span>
+            </div>
+            <div class="project-status status-in-progress">In Progress</div>
+            <p>Features:</p>
+            <ul>
+                <li>Mobile-friendly data collection forms with offline capability</li>
+                <li>Interactive map showing sampling locations and historical trends</li>
+                <li>Data validation and quality control measures</li>
+                <li>Integration with government environmental databases</li>
+                <li>Automated alerts for concerning water quality changes</li>
+            </ul>
+            <p>This project emerged from my kayaking adventures and concern for local watershed health. Working with environmental scientists has been rewarding, especially seeing how data visualization can influence conservation efforts.</p>
+        </div>
+        
+        <div class="project-item">
+            <h3>🥘 RecipeDB: Mushroom Cuisine Collection</h3>
+            <p>A specialized recipe database focused on gourmet mushroom cuisine with ingredient substitution recommendations.</p>
+            <div>
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">PWA</span>
+                <span class="tech-tag">Algolia Search</span>
+            </div>
+            <div class="project-status status-complete">Completed</div>
+            <p>Features:</p>
+            <ul>
+                <li>Nutritional analysis of recipes with focus on mushroom benefits</li>
+                <li>Advanced filtering by cultivation difficulty, flavor profile, and texture</li>
+                <li>User-contributed recipes with moderation system</li>
+                <li>Specialized search algorithm for ingredient substitutions</li>
+                <li>Integrated mushroom identification guide for foragers</li>
+            </ul>
+            <p>This project combines my interests in cooking and mushroom cultivation. The most interesting technical challenge was developing a recommendation algorithm that understands flavor profiles and textures for accurate substitution suggestions.</p>
+        </div>
+        
+        <div class="project-item">
+            <h3>🤖 Vintage Computer Emulator Collection</h3>
+            <p>A web-based collection of emulators for vintage computing platforms with educational resources.</p>
+            <div>
+                <span class="tech-tag">WebAssembly</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Canvas API</span>
+                <span class="tech-tag">IndexedDB</span>
+            </div>
+            <div class="project-status status-planned">Planned</div>
+            <p>Features (Planned):</p>
+            <ul>
+                <li>Accurate emulation of ZX Spectrum, Commodore 64, and BBC Micro</li>
+                <li>Interactive tutorials on assembly language programming</li>
+                <li>Visual debugging tools showing CPU states and memory</li>
+                <li>Community-contributed software library</li>
+                <li>Timeline of computing history with interactive exhibits</li>
+            </ul>
+            <p>This ambitious project aims to preserve computing history while making it accessible to new generations. I've completed the research phase and begun implementing the ZX Spectrum emulator core.</p>
+        </div>
+        
+        <h2>Want to Collaborate?</h2>
+        <p>I'm always open to new project ideas and collaborations. If you're interested in working together or have questions about any of these projects, please reach out!</p>
+        
+        <h2 id="contact">Contact Me</h2>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Aaron Jacobs. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

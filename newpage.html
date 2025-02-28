@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23999999' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
             color: #333;
             text-align: center;
         }
@@ -45,31 +46,115 @@
         a {
             text-decoration: none;
             color: #0077cc;
+            transition: color 0.3s ease;
         }
-    footer {
-        background-color: #333;
-        color: #fff;
-        padding: 15px;
-        font-size: 14px;
-        margin-top: 20px;
-        width: 100%;
-    }
+        a:hover {
+            color: #005599;
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 20px;
+            }
+            h2 {
+                color: #444;
+                margin-top: 40px;
+            }
+            /* Navigation Bar Styles */
+            .navbar {
+                background-color: #444;
+                overflow: hidden;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .navbar a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-size: 18px;
+                transition: background-color 0.3s;
+            }
+            .navbar a:hover {
+                background-color: #555;
+                color: white;
+                text-decoration: none;
+            }
+            .navbar a.active {
+                background-color: #0077cc;
+            }
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-family: Arial, sans-serif;
+        }
+        .contact-form button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #005599;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            img {
+                width: 120px;
+            }
+        }
 </style>
 </head>
 <body>
     <header>Aaron's GitHub Page</header>
+    
+    <div class="navbar">
+        <a href="newpage.html" class="active">Home</a>
+        <a href="interests.html">Interests</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
     <div class="container">
         <img src="happycapcircle.png" alt="Aaron's Profile Picture">
         <h2>About Me</h2>
         <p>Hi! I'm Aaron. I love kayaking, exploring nature, cooking, and working on my mushroom farm. I'm also into retro gaming, coding, and digital creativity.</p>
         
         <h2>My Interests</h2>
+        <p>Check out <a href="interests.html">my detailed interests page</a> to learn more about my hobbies and passions.</p>
         <ul>
             <li>🌿 Mycology & Mushroom Cultivation</li>
             <li>🕹️ ZX Spectrum Next Game Development</li>
             <li>🚣‍♂️ Kayaking & Outdoor Adventures</li>
             <li>🥘 Cooking & Trying New Recipes</li>
             <li>🖥️ Coding & Retro Computing</li>
+        </ul>
+        
+        <h2>Projects</h2>
+        <p>Visit my <a href="projects.html">projects page</a> to see more details about my work.</p>
+        <ul>
+            <li>🍄 <a href="#">Mushroom Cultivation Dashboard</a> - Track growth and conditions of various mushroom species</li>
+            <li>🎮 <a href="#">Retro Game Collection</a> - ZX Spectrum games I've developed or restored</li>
+            <li>🌿 <a href="#">Nature Photography Gallery</a> - Photos from my kayaking adventures</li>
         </ul>
         
         <h2>Find Me Online</h2>
@@ -82,6 +167,16 @@
         <ul>
             <li><a href="https://happycaps.co.uk" target="_blank">HappyCaps Mushroom Farm</a></li>
         </ul>
+        
+        <h2 id="contact">Contact Me</h2>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
     <footer>
         <p>&copy; 2025 Aaron Jacobs. All rights reserved.</p>

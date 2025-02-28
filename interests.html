@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interests - Aaron's GitHub Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23999999' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #444;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #0077cc;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #005599;
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 20px;
+            width: 100%;
+        }
+        h2 {
+            color: #444;
+            margin-top: 40px;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-family: Arial, sans-serif;
+        }
+        .contact-form button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #005599;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            img {
+                width: 120px;
+            }
+        }
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: #444;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+        }
+        .navbar a.active {
+            background-color: #0077cc;
+        }
+        .interest-item {
+            margin-bottom: 30px;
+            text-align: left;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .interest-item h3 {
+            color: #0077cc;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>My Interests</header>
+    
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="interests.html" class="active">Interests</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+    <div class="container">
+        <img src="happycapcircle.png" alt="Aaron's Profile Picture">
+        
+        <h2>My Passions & Hobbies</h2>
+        <p>Here's a more detailed look at the things that fascinate me and keep me busy when I'm not coding.</p>
+        
+        <div class="interest-item">
+            <h3>🍄 Mycology & Mushroom Cultivation</h3>
+            <p>My journey into mycology began five years ago when I discovered the fascinating world of fungi. I now run HappyCaps Mushroom Farm, where I cultivate various gourmet and medicinal mushrooms including:</p>
+            <ul>
+                <li>Lion's Mane (Hericium erinaceus) - Known for its cognitive benefits</li>
+                <li>Blue Oyster (Pleurotus ostreatus var. columbinus) - A culinary delight with a mild flavor</li>
+                <li>Reishi (Ganoderma lucidum) - Prized for its adaptogenic properties</li>
+                <li>King Oyster (Pleurotus eryngii) - Meaty texture perfect for vegan dishes</li>
+            </ul>
+            <p>I've developed my own substrate mixes and cultivation techniques, and I enjoy experimenting with different growing conditions to optimize yields and mushroom quality.</p>
+        </div>
+        
+        <div class="interest-item">
+            <h3>🕹️ ZX Spectrum Next Game Development</h3>
+            <p>The ZX Spectrum was my first computer, and I've rekindled that love with the modern ZX Spectrum Next. I'm currently working on:</p>
+            <ul>
+                <li>A retro-style platformer, continuing the adventures of the Magic Knight, using Z80 assembly</li>
+                <li>A mushroom identification game combining my two passions</li>
+                <li>Restoration/remake of classic games with enhanced graphics while preserving the original gameplay</li>
+                <li>A new graphic adventure, sea exploration game, <b>The Deep</b></li>
+            </ul>
+            <p>I find the constraints of retro hardware oddly liberating, forcing creative solutions to technical limitations.</p>
+        </div>
+        
+        <div class="interest-item">
+            <h3>🚣‍♂️ Kayaking & Outdoor Adventures</h3>
+            <p>Water has always called to me, and kayaking provides the perfect way to explore nature from a unique perspective. My kayaking adventures include:</p>
+            <ul>
+                <li>Exploring the Severn River and the River Wye and their tributaries</li>
+                <li>Stand-Up-Paddle-boarding on the Wye and lakes at South Cerney</li>
+                <li>Dawn paddles to observe wildlife in their natural habitats</li>
+                <li>Combining photography with kayaking to capture hard-to-reach landscapes</li>
+            </ul>
+            <p>These trips provide not just exercise, but a chance to disconnect from technology and reconnect with nature.</p>
+        </div>
+        
+        <div class="interest-item">
+            <h3>🥘 Cooking & Trying New Recipes</h3>
+            <p>My culinary adventures often feature mushrooms from my farm, but extend well beyond fungi. I particularly enjoy:</p>
+            <ul>
+                <li>Fermentation projects including homemade kimchi and sauerkraut</li>
+                <li>Developing plant-based recipes that showcase the meatiness of mushrooms</li>
+                <li>Exploring international cuisines, with a current focus on Korean and Thai dishes</li>
+                <li>Baking sourdough bread with a starter I've maintained for three years</li>
+            </ul>
+            <p>Cooking serves as both a creative outlet and a way to share experiences with friends and family.</p>
+        </div>
+        
+        <div class="interest-item">
+            <h3>🖥️ Coding & Retro Computing</h3>
+            <p>Beyond professional coding, I have a passion for vintage computers and their unique architectures:</p>
+            <ul>
+                <li>Collecting and restoring vintage computing hardware</li>
+                <li>Writing efficient code for resource-constrained systems</li>
+                <li>Exploring creative coding through generative art projects</li>
+                <li>Contributing to open-source emulation projects to preserve computing history</li>
+            </ul>
+            <p>I believe understanding computing history provides valuable insights into modern development challenges.</p>
+        </div>
+        
+        <h2>Want to Connect?</h2>
+        <p>If you share any of these interests or want to collaborate on a project, I'd love to hear from you!</p>
+        
+        <h2 id="contact">Contact Me</h2>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Aaron Jacobs. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
