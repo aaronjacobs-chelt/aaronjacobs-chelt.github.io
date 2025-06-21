@@ -64,31 +64,6 @@
             color: #444;
             margin-top: 40px;
         }
-        .contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            font-family: Arial, sans-serif;
-        }
-        .contact-form button {
-            background-color: #0077cc;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .contact-form button:hover {
-            background-color: #005599;
-        }
         @media (max-width: 600px) {
             .container {
                 margin: 10px;
@@ -170,181 +145,130 @@
     <header>My Projects</header>
     
     <div class="navbar">
-        <a href="newpage.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="interests.html">Interests</a>
         <a href="projects.html" class="active">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="gallery.html">Gallery</a>
     </div>
     
     <div class="container">
-        <img src="happycapcircle.png" alt="Aaron's Profile Picture">
+        <img src="photos/aaron-circle.png" alt="Aaron's Profile Picture">
         
         <h2>My Portfolio</h2>
         <p>Here's a collection of my recent projects that showcase my skills, interests, and development experience.</p>
         
         <div class="project-item">
-            <a href="https://github.com/aaronjacobs-chelt/Mycodo"><h3>🍄 MycoDB: Mushroom Cultivation Tracker</h3></a>
-            <p>A comprehensive web application for tracking mushroom cultivation progress, environmental conditions, and yields.</p>
-            <div>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">Chart.js</span>
-                <span class="tech-tag">Progressive Web App</span>
-            </div>
-            <div class="project-status status-in-progress">In Progress</div>
-            <p>Features:</p>
-            <ul>
-                <li>Real-time environmental monitoring via IoT sensors</li>
-                <li>Growth stage tracking with image recognition</li>
-                <li>Yield prediction based on historical data</li>
-                <li>Customizable alerts for optimal conditions</li>
-                <li>Community sharing of cultivation "recipes"</li>
-            </ul>
-            <p>This project combines my passion for mycology with software development. The biggest challenge has been implementing the image recognition system for automatically identifying contamination issues.</p>
-        </div>
-        
-        <div class="project-item">
-            <h3>🎮 SpectrumQuest: ZX Spectrum Next Adventure Game</h3>
-            <p>A retro-style adventure game built for the ZX Spectrum Next, featuring modern game mechanics while respecting hardware limitations.</p>
-            <div>
-                <span class="tech-tag">Z80 Assembly</span>
-                <span class="tech-tag">NextBASIC</span>
-                <span class="tech-tag">Pixel Art</span>
-                <span class="tech-tag">Chiptune Music</span>
-            </div>
-            <div class="project-status status-complete">Completed</div>
-            <p>Features:</p>
-            <ul>
-                <li>16-color palette with dithering techniques for expanded visual range</li>
-                <li>Original soundtrack using AY-3-8912 chip capabilities</li>
-                <li>Procedurally generated dungeons for extended replayability</li>
-                <li>Memory-efficient save game system</li>
-                <li>Distributed as both digital download and physical cassette</li>
-            </ul>
-            <p>Creating games for retro hardware has been a fascinating exercise in working within strict constraints. Optimizing code to fit within 128K while maintaining smooth gameplay required several innovative techniques.</p>
-        </div>
-        
-        <div class="project-item">
-            <a href="https://github.com/aaronjacobs-chelt/PiAquaPulse"><h3>📊 River Health Monitor</h3></a>
-            <p>Citizen science platform for collecting and visualizing water quality data from the Severn River and tributaries.</p>
+            <a href="https://github.com/aaronjacobs-chelt/mushroom-cultivation-quiz"><h3>🍄 Mushroom Cultivation Quiz</h3></a>
+            <p>A comprehensive, modular quiz application testing knowledge about mushroom cultivation techniques, varieties, substrates, and terminology. Features multiple difficulty levels, timer modes, and personalized study recommendations.</p>
             <div>
                 <span class="tech-tag">Python</span>
-                <span class="tech-tag">Django</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">Leaflet.js</span>
-                <span class="tech-tag">D3.js</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">JavaScript</span>
             </div>
-            <div class="project-status status-in-progress">In Progress</div>
+            <div class="project-status status-complete">Recently Updated</div>
             <p>Features:</p>
             <ul>
-                <li>Mobile-friendly data collection forms with offline capability</li>
-                <li>Interactive map showing sampling locations and historical trends</li>
-                <li>Data validation and quality control measures</li>
-                <li>Integration with government environmental databases</li>
-                <li>Automated alerts for concerning water quality changes</li>
+                <li>Multiple difficulty levels for different skill levels</li>
+                <li>Timer modes for practice and assessment</li>
+                <li>Comprehensive question bank covering cultivation techniques</li>
+                <li>Personalized study recommendations based on performance</li>
+                <li>Progress tracking and detailed score analysis</li>
             </ul>
-            <p>This project emerged from my kayaking adventures and concern for local watershed health. Working with environmental scientists has been rewarding, especially seeing how data visualization can influence conservation efforts.</p>
+            <p>This educational tool helps both beginners and experienced cultivators test and improve their mycological knowledge.</p>
         </div>
         
         <div class="project-item">
-            <h3>🥘 RecipeDB: Mushroom Cuisine Collection</h3>
-            <p>A specialized recipe database focused on gourmet mushroom cuisine with ingredient substitution recommendations.</p>
+            <a href="https://github.com/aaronjacobs-chelt/PiAquaPulse"><h3>🌊 PiAquaPulse</h3></a>
+            <p>Citizen science platform for collecting and visualising water quality data from Rivers and Lakes.</p>
             <div>
-                <span class="tech-tag">Vue.js</span>
-                <span class="tech-tag">Firebase</span>
-                <span class="tech-tag">PWA</span>
-                <span class="tech-tag">Algolia Search</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">IoT Sensors</span>
+            </div>
+            <div class="project-status status-in-progress">Active Development</div>
+            <p>Features:</p>
+            <ul>
+                <li>Real-time water quality monitoring using pH, temperature, and turbidity sensors</li>
+                <li>Data visualization and trend analysis</li>
+                <li>Community data collection and sharing</li>
+                <li>Integration with citizen science initiatives</li>
+                <li>Mobile-friendly web interface for field data collection</li>
+            </ul>
+            <p>This project emerged from my kayaking adventures and passion for environmental monitoring. It provides valuable data for understanding local water ecosystem health.</p>
+        </div>
+        
+        <div class="project-item">
+            <a href="https://github.com/aaronjacobs-chelt/Raspberry-PI-Automated-Mushroom-Farm"><h3>🍄 Automated Mushroom Farm</h3></a>
+            <p>Outlines code & components needed for an automated shotgun fruiting chamber for mushroom cultivation.</p>
+            <div>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">IoT</span>
+                <span class="tech-tag">Sensors</span>
+                <span class="tech-tag">Automation</span>
             </div>
             <div class="project-status status-complete">Completed</div>
             <p>Features:</p>
             <ul>
-                <li>Nutritional analysis of recipes with focus on mushroom benefits</li>
-                <li>Advanced filtering by cultivation difficulty, flavor profile, and texture</li>
-                <li>User-contributed recipes with moderation system</li>
-                <li>Specialized search algorithm for ingredient substitutions</li>
-                <li>Integrated mushroom identification guide for foragers</li>
+                <li>Automated humidity and temperature control</li>
+                <li>Air circulation management with timer-controlled fans</li>
+                <li>Misting system for optimal moisture levels</li>
+                <li>Sensor monitoring and data logging</li>
+                <li>Complete parts list and assembly instructions</li>
             </ul>
-            <p>This project combines my interests in cooking and mushroom cultivation. The most interesting technical challenge was developing a recommendation algorithm that understands flavor profiles and textures for accurate substitution suggestions.</p>
+            <p>This practical project combines my passion for mushroom cultivation with IoT automation, creating an efficient growing environment for gourmet mushrooms.</p>
         </div>
         
         <div class="project-item">
-            <h3>🤖 Vintage Computer Emulator Collection</h3>
-            <p>A web-based collection of emulators for vintage computing platforms with educational resources.</p>
+            <a href="https://github.com/aaronjacobs-chelt/SmartSense"><h3>🔬 SmartSense</h3></a>
+            <p>A sophisticated IoT environmental monitoring and automation platform.</p>
             <div>
-                <span class="tech-tag">WebAssembly</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Canvas API</span>
-                <span class="tech-tag">IndexedDB</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">IoT</span>
+                <span class="tech-tag">Sensors</span>
+                <span class="tech-tag">Data Analytics</span>
+                <span class="tech-tag">Automation</span>
             </div>
-            <div class="project-status status-planned">Planned</div>
-            <p>Features (Planned):</p>
+            <div class="project-status status-in-progress">In Development</div>
+            <p>Features:</p>
             <ul>
-                <li>Accurate emulation of ZX Spectrum, Commodore 64, and BBC Micro</li>
-                <li>Interactive tutorials on assembly language programming</li>
-                <li>Visual debugging tools showing CPU states and memory</li>
-                <li>Community-contributed software library</li>
-                <li>Timeline of computing history with interactive exhibits</li>
+                <li>Multi-sensor environmental data collection</li>
+                <li>Real-time monitoring and alerting system</li>
+                <li>Automated response to environmental changes</li>
+                <li>Data visualization and historical analysis</li>
+                <li>Modular sensor integration framework</li>
             </ul>
-            <p>This ambitious project aims to preserve computing history while making it accessible to new generations. I've completed the research phase and begun implementing the ZX Spectrum emulator core.</p>
+            <p>An advanced monitoring platform that builds on my experience with environmental sensors and automation systems.</p>
+        </div>
+        
+        <div class="project-item">
+            <a href="https://github.com/aaronjacobs-chelt/Mycodo"><h3>🌱 Mycodo (Fork)</h3></a>
+            <p>An environmental monitoring and regulation system - my customized fork with mushroom cultivation specific features.</p>
+            <div>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">Environmental Control</span>
+            </div>
+            <div class="project-status status-in-progress">Customizing</div>
+            <p>My Contributions:</p>
+            <ul>
+                <li>Mushroom-specific environmental presets</li>
+                <li>Cultivation stage tracking integration</li>
+                <li>Enhanced humidity control algorithms</li>
+                <li>Custom sensor calibrations for mycology</li>
+                <li>Specialized alerting for cultivation milestones</li>
+            </ul>
+            <p>Building on the excellent Mycodo platform, I've added features specifically tailored for mushroom cultivation monitoring and automation.</p>
         </div>
         
         <h2>Want to Collaborate?</h2>
         <p>I'm always open to new project ideas and collaborations. If you're interested in working together or have questions about any of these projects, please reach out!</p>
         
-        <h2 id="contact">Contact Me</h2>
-        <div class="contact-form">
-            <form action="https://api.web3forms.com/submit" method="POST" id="form">
-                <input type="hidden" name="access_key" value="c092d31f-9388-4109-8a35-709153db928b">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-                <div id="result"></div>
-            </form>
-        </div>
-
-        <script>
-            const form = document.getElementById('form');
-            const result = document.getElementById('result');
-            
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const formData = new FormData(form);
-                const object = Object.fromEntries(formData);
-                const json = JSON.stringify(object);
-                
-                result.innerHTML = "Please wait...";
-                
-                fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: json
-                })
-                .then(async (response) => {
-                    let json = await response.json();
-                    if (response.status == 200) {
-                        result.innerHTML = json.message;
-                        form.reset();
-                    } else {
-                        console.log(response);
-                        result.innerHTML = json.message;
-                    }
-                })
-                .catch(error => {
-                    console.log(error);
-                    result.innerHTML = "Something went wrong!";
-                })
-                .then(function() {
-                    setTimeout(() => {
-                        result.innerHTML = "";
-                    }, 5000);
-                });
-            });
-        </script>
     </div>
     <footer>
         <p>&copy; 2025 Aaron Jacobs. All rights reserved.</p>

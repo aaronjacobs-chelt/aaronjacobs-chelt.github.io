@@ -64,31 +64,6 @@
             color: #444;
             margin-top: 40px;
         }
-        .contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            font-family: Arial, sans-serif;
-        }
-        .contact-form button {
-            background-color: #0077cc;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .contact-form button:hover {
-            background-color: #005599;
-        }
         @media (max-width: 600px) {
             .container {
                 margin: 10px;
@@ -140,14 +115,14 @@
     <header>My Interests</header>
     
     <div class="navbar">
-        <a href="newpage.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="interests.html" class="active">Interests</a>
         <a href="projects.html">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="gallery.html">Gallery</a>
     </div>
     
     <div class="container">
-        <img src="happycapcircle.png" alt="Aaron's Profile Picture">
+        <img src="photos/aaron-circle.png" alt="Aaron's Profile Picture">
         
         <h2>My Passions & Hobbies</h2>
         <p>Here's a more detailed look at the things that fascinate me and keep me busy when I'm not coding.</p>
@@ -215,59 +190,6 @@
         <h2>Want to Connect?</h2>
         <p>If you share any of these interests or want to collaborate on a project, I'd love to hear from you!</p>
         
-        <h2 id="contact">Contact Me</h2>
-        <div class="contact-form">
-            <form action="https://api.web3forms.com/submit" method="POST" id="form">
-                <input type="hidden" name="access_key" value="c092d31f-9388-4109-8a35-709153db928b">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-                <div id="result"></div>
-            </form>
-        </div>
-
-        <script>
-            const form = document.getElementById('form');
-            const result = document.getElementById('result');
-            
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const formData = new FormData(form);
-                const object = Object.fromEntries(formData);
-                const json = JSON.stringify(object);
-                
-                result.innerHTML = "Please wait...";
-                
-                fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: json
-                })
-                .then(async (response) => {
-                    let json = await response.json();
-                    if (response.status == 200) {
-                        result.innerHTML = json.message;
-                        form.reset();
-                    } else {
-                        console.log(response);
-                        result.innerHTML = json.message;
-                    }
-                })
-                .catch(error => {
-                    console.log(error);
-                    result.innerHTML = "Something went wrong!";
-                })
-                .then(function() {
-                    setTimeout(() => {
-                        result.innerHTML = "";
-                    }, 5000);
-                });
-            });
-        </script>
     </div>
     <footer>
         <p>&copy; 2025 Aaron Jacobs. All rights reserved.</p>
